@@ -1,0 +1,15 @@
+{
+    "name": "julia/tfp",
+    "autoload": {
+        "psr-4": {
+            "julia\\tfp\\": "public/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Julia Ludwig",
+            "email": "julialudwigifrs@gmail.com"
+        }
+    ],
+    "require": {}
+}

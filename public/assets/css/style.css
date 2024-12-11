@@ -1,0 +1,233 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte principal e estrutura base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9e3b1; /* Fundo estilo queijo */
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px; /* Espaçamento superior para evitar sobreposição do header fixo */
+}
+
+/* Header fixo com design pizza */
+header {
+    background-color: #f28c28; /* Laranja pizza */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #f1c40f; /* Amarelo queijo no hover */
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Container principal */
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da tabela */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.styled-table th {
+    background-color: #f28c28;
+    color: white;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.styled-table img {
+    max-width: 80px;
+    border-radius: 5px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #4CAF50; /* Verde vibrante */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.edit-btn {
+    background-color: #007BFF; /* Azul */
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #DC3545; /* Vermelho */
+}
+
+.delete-btn:hover {
+    background-color: #a71d2a;
+}
+
+.add-btn {
+    background-color: #f28c28; /* Laranja pizza */
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.add-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Cartões de pizza */
+.pizza-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pizza-card {
+    background-color: white;
+    border-radius: 8px;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pizza-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.pizza-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.pizza-card .pizza-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.pizza-card h3 {
+    font-size: 1.3em;
+    color: #f28c28;
+    margin-bottom: 10px;
+}
+
+.pizza-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.pizza-card button {
+    padding: 8px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pizza-card button:hover {
+    background-color: #45a049;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #f28c28;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .pizza-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pizza-card {
+        width: 100%;
+    }
+
+    .styled-table img {
+        max-width: 60px;
+    }
+}
